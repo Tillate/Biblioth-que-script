@@ -1,0 +1,155 @@
+/****** Header *****/
+* {
+    font-family: lato;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+}
+
+footer {
+    background-color: #f7f7f7;
+    min-height: 150px;
+}
+li {
+    list-style: none;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h2 {
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+.header-container {
+    background-color: #f7f7f7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 100px;
+}
+.header-nav ul {
+    display: flex;
+    gap: 15px;
+}
+
+/* Color title */
+.green {
+    color:#4CB981;
+}
+.yellow {
+    color:#E5BF4D;
+}
+.blue {
+    color:#204E93;
+}
+/***** Images & couleurs ********/
+.image-container {
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+.current-img {
+    border-radius: 10px;
+}
+.product-image-galerie {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.product-image-galerie span {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+}
+.couleur1 {
+    background-color: #4CB981;
+}
+.couleur2 {
+    background-color: #E5BF4D;
+}
+.couleur3 {
+    background-color: #204E93;
+}
+.product-image-galerie .active {
+    border: 1px solid black;
+}
+
+@keyframes fadeIn {
+    to {
+      opacity:1;
+    }
+}
+  
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 0.4s ease-in 1 forwards;
+}
+
+
+
+/********* Chiffres ************/
+.chiffres {
+    background-color:#74A2AC;
+    min-height: 380px;
+    color: white;
+}
+.chiffres2 {
+    background-color: #4C507B;
+    min-height: 380px;
+    color: white;
+}
+.blank {
+    background-color:white;
+    height: 250px;
+}
+
+.chiffres-container {
+    margin-top: 150px;
+    padding:   25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+}
+
+.chiffres-card h3 {
+    font-family: Vollkorn;
+    text-transform: lowercase;
+    font-size: 98px;
+    font-weight: 600;
+}
+.chiffres-card p {
+    font-family: Lato;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/* Animation */
+
+.reveal{
+    position: relative;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: 0.8s all ease;
+    overflow: hidden;
+  }
+  
+.reveal.active{
+transform: translateY(0);
+opacity: 1;
+}
+
+
