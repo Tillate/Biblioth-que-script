@@ -40,3 +40,32 @@ function change3() {
         current.classList.remove('fade-in');
     },300);
 }
+
+
+
+//Script 2 Galerie Photos
+const current2 = document.getElementById('current2');
+const thumbnails = document.querySelectorAll('.thumbnail');
+
+//Opacité pour voir la vignette select
+thumbnails[0].style.opacity = 0.6;
+//Boucle sur les vignettes
+for (let i = 0; i < thumbnails.length; i++){
+thumbnails[i].addEventListener('click', show);
+};
+
+function show() {
+thumbnails.forEach(function (img){
+    img.style.opacity = 1;
+})
+//Swich source current image
+let imgSource = this.getAttribute('src');
+current2.setAttribute('src', imgSource);
+
+//Effet fade in
+current2.classList.add('fade-in');
+this.style.opacity = 0.6;
+setTimeout (function (){
+    current2.classList.remove('fade-in');
+},300);
+}
