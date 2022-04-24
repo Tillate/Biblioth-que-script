@@ -6,39 +6,28 @@ couleur2.addEventListener("click", change2);
 const couleur3 = document.querySelector('.couleur3');
 couleur3.addEventListener("click", change3);
 
-
+function FadeIn () {
+    current.classList.add('fade-in');
+    setTimeout (function (){
+        current.classList.remove('fade-in');
+    },300);
+}
 function change1() {
     // Switch source image
     var image = document.getElementById('current');
     image.src="img/tanjiro3.jpg";
-
-    // 
-    this.style.opacity = 0.6;
-    // Effet FadeIn
-    current.classList.add('fade-in');
-    setTimeout (function (){
-        current.classList.remove('fade-in');
-    },300);
+    FadeIn();
 }
 function change2() {
     var image = document.getElementById('current');
     image.src="img/zenitsu.jpg";
+    FadeIn();
 
-    current.classList.add('fade-in');
-    this.style.opacity = 0.6;
-    setTimeout (function (){
-        current.classList.remove('fade-in');
-    },300);
 }
 function change3() {
     var image = document.getElementById('current');
     image.src="img/inosuke.jpg";
-
-    current.classList.add('fade-in');
-    this.style.opacity = 0.6;
-    setTimeout (function (){
-        current.classList.remove('fade-in');
-    },300);
+    FadeIn();
 }
 
 
@@ -69,3 +58,26 @@ setTimeout (function (){
     current2.classList.remove('fade-in');
 },300);
 }
+
+
+
+// Script 3 Slider
+const current3 = document.getElementById('slide');
+
+let slide = new Array("chihiro3.jpg", "chihiro2.jpg", "chihiro4.jpg", "chihiro1.jpg");
+let i = 0;
+
+function ChangeSlide(sens) {
+    i = i + sens;
+    if (i < 0)
+        i = slide.length - 1;
+    if (i > slide.length - 1)
+        i = 0;
+    document.getElementById("slide").src = "img/" + slide[i];
+    //Effet fade in
+    current3.classList.add('fade-in');
+    setTimeout (function (){
+        current3.classList.remove('fade-in');
+    },300);
+}
+  

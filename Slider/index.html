@@ -21,7 +21,7 @@
             <ul>
                 <li><a href="#slider1">Color picker</a></li>
                 <li><a href="#slider2">Gallery</a></li>
-                <li><a href="">Coming soon...</a></li>
+                <li><a href="#slider3">Slider</a></li>
             </ul>
         </nav>
     </header>
@@ -58,26 +58,22 @@
             </div>
         </section>
 
-        <section class="image-container section3" id="slider3">
-            <h1>Incredibly Basic Slider</h1>
-            <div id="slider">
-              <a href="#" class="control_next">>></a>
-              <a href="#" class="control_prev"><</a>
-              <ul>
-                <li>SLIDE 1</li>
-                <li>SLIDE 2</li>
-                <li>SLIDE 3</li>
-                <li>SLIDE 4</li>
-              </ul>  
+        <section class="section3" id="slider3">
+            <h2>Basic Slider</h2>
+            <div class="slider3">
+                <img src="img/chihiro3.jpg" id="slide">
+                <div class="previous" onclick="ChangeSlide(-1)"><</div>
+                <div class="next" onclick="ChangeSlide(1)">></div>
             </div>
         </section>
+        
 
 
     
     </main>
-
     <footer></footer>
 
 <script src="index.js"></script>
+
 </body>
 </html>
